@@ -45,15 +45,15 @@
 					</md-list-item>
 					<md-list-item>
 						<p>Minimum payout (Wallet)</p>
-						<p class="text-right">{{config.min_wallet_payout | toXMR}} XMR</p>
+						<p class="text-right">{{config.min_wallet_payout | toXMR}} {{GLOBALS.coin_code}}</p>
 					</md-list-item>
 					<md-list-item>
 						<p>Minimum payout (BTC)</p>
-						<p class="text-right">{{config.min_btc_payout | toXMR}} XMR</p>
+						<p class="text-right">{{config.min_btc_payout | toXMR}} {{GLOBALS.coin_code}}</p>
 					</md-list-item>
 					<md-list-item>
 						<p>Minimum payout (Exchange)</p>
-						<p class="text-right">{{config.min_exchange_payout | toXMR}} XMR</p>
+						<p class="text-right">{{config.min_exchange_payout | toXMR}} {{GLOBALS.coin_code}}</p>
 					</md-list-item>
 					<md-list-item>
 						<p>Block Maturity Depth</p>
@@ -61,7 +61,7 @@
 					</md-list-item>
 					<md-list-item>
 						<p>Minimum Denomination</p>
-						<p class="text-right">{{config.min_denom | toXMR}}</p>
+						<p class="text-right">{{config.min_denom | {{GLOBALS.pool_name}}}}</p>
 					</md-list-item>
 				</md-list>
 			</md-card-content>

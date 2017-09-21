@@ -8,6 +8,13 @@ angular.module('utils.strings', [])
   };
 })
 
+.filter('toSUMO', function() {
+  return function(amount) {
+    return amount / 1000000000;
+  };
+})
+
+
 .filter('toHashRate', function() {
   return function(hashes) {
     if (hashes > 1000000) {
@@ -26,6 +33,14 @@ angular.module('utils.strings', [])
     return $sce.trustAsHtml(str); 
   };
 })
+
+.filter('hashToLinkSumo', function($sce) {
+  return function(hash, type) {
+    var str = (hash == undefined) ? 'none' : "<a class=\"md-body-2\" target=\"_new\" href=\"https://explorer.sumokoin.com/"+type+"/" + hash + "\">" + hash + "</a>";
+    return $sce.trustAsHtml(str); 
+  };
+})
+
 
 .filter('difficultyToHashRate', function() {
   return function(hashrate) {
