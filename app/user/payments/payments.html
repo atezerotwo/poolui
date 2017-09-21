@@ -29,7 +29,7 @@
 								{{payment.ts | date:'hh:mm:ss dd/MM/yy'}}
 							</md-tooltip>
 						</td>
-						<td md-cell ng-bind-html="payment.hash | hashToLink: 'tx'"></td>
+						<td md-cell ng-bind-html="payment.hash | hashToLinkSumo: 'tx'"></td>
 						<td md-cell><p class="md-body-2">{{payment.value | toXMR}} XMR</p></td>
 						<td md-cell><p class="md-body-2">{{payment.fee | toXMR }} XMR</p></td>
 						<td md-cell><p class="md-body-2">{{payment.mixins}}</p></td>
