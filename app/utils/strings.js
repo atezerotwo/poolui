@@ -14,6 +14,11 @@ angular.module('utils.strings', [])
   };
 })
 
+.filter('toCoinDiv', function() {
+  return function(amount) {
+    return amount / {{GLOBALS.coin_div}};
+  };
+})
 
 .filter('toHashRate', function() {
   return function(hashes) {
@@ -29,7 +34,7 @@ angular.module('utils.strings', [])
 
 .filter('hashToLink', function($sce) {
   return function(hash, type) {
-    var str = (hash == undefined) ? 'none' : "<a class=\"md-body-2\" target=\"_new\" href=\"https://xmrchain.net/"+type+"/" + hash + "\">" + hash + "</a>";
+    var str = (hash == undefined) ? 'none' : "<a class=\"md-body-2\" target=\"_new\" href=\"+{{GLOBALS.chain_url}}+/"+type+"/" + hash + "\">" + hash + "</a>";
     return $sce.trustAsHtml(str); 
   };
 })
