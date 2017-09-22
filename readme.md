@@ -1,5 +1,11 @@
 # altnote pool frontend
 
+Heavily modified fork of mesh0000's [poolui](https://github/mesh0000/poolui) for Snipa22's [nodejs-pool](https://github.com/Snipa22/nodejs-pool)
+
+This is in beta and provides for alt cryptonite coins like SUMO and KRB.
+
+I suggest if you are running nodejs-pool for XMR to use mesh0000's original poolui.
+
 ### AngularJS based UI for [nodejs-pool](https://github.com/Snipa22/nodejs-pool)
 
 ### Features
