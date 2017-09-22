@@ -27,7 +27,7 @@
 					</md-list-item>
 					<md-list-item>
 						<p> Reward </p>
-						<p class="text-right">{{network.value | toXMR}}</p>
+						<p class="text-right">{{network.value | toCoinDiv}}</p>
 					</md-list-item>
 					<md-list-item>
 						<p> Time Found </p>
@@ -64,7 +64,7 @@
 									</md-list-item>
 									<md-list-item>
 										<p> Block Reward </p>
-										<p class="text-right">{{lastBlock[pooltype].value | toXMR | number:10}} XMR</p>
+										<p class="text-right">{{lastBlock[pooltype].value | toCoinDiv | number:10}} {{GLOBALS.coin_code}}</p>
 									</md-list-item>
 									<md-list-item>
 										<p> Time Found </p>
@@ -165,10 +165,10 @@
 				</div>
 				<div flex layout="column" layout-gt-xs="row">
 					<div flex>
-						<h5> Total Due<h2>{{miner.amtDue | toXMR | number:10}} XMR</h2></h5>
+						<h5> Total Due<h2>{{miner.amtDue | toCoinDiv | number:10}} {{GLOBALS.coin_code}}</h2></h5>
 					</div>
 					<div flex>
-						<h5> Total Paid<h2>{{miner.amtPaid | toXMR | number:10}} XMR</h2></h5>
+						<h5> Total Paid<h2>{{miner.amtPaid | toCoinDiv | number:10}} {{GLOBALS.coin_code}}</h2></h5>
 					</div>
 				</div>
 			</div>
