@@ -2,6 +2,7 @@
 
 angular.module('utils.strings', [])
 
+/*
 .filter('toXMR', function() {
   return function(amount) {
     return amount / 1000000000000;
@@ -13,10 +14,11 @@ angular.module('utils.strings', [])
     return amount / 1000000000;
   };
 })
+*/
 
 .filter('toCoinDiv', function() {
   return function(amount) {
-    return amount / {{GLOBALS.coin_div}};
+    return amount / 1000000000;  // need to reference coin_div
   };
 })
 
