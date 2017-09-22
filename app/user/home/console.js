@@ -15,7 +15,7 @@ app.controller('ConsoleCtrl', function($scope, $route, $filter, $timeout, $mdDia
 	
 	var getConfig = function () {
 		dataService.getData("/authed", function(data){
-			$scope.paymentThresh = $filter('toXMR')(data.msg.payout_threshold);
+			$scope.paymentThresh = $filter('toCoinDiv')(data.msg.payout_threshold);
 			email_enabled = data.msg.email_enabled;
 			$scope.email_toggle = data.msg.email_enabled;
 		});
